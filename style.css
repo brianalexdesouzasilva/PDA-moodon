@@ -1,0 +1,220 @@
+/* Stile generale */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding-top: 80px; /* Aggiungi padding-top per evitare la sovrapposizione con l'header */
+}
+
+/* Header */
+.header {
+    background-color: #b3e5fc; /* Azzurro chiaro */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.header .logo img {
+    height: 50px;
+}
+
+.header .menu {
+    display: flex;
+}
+
+.header .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header .menu ul li {
+    margin: 0 15px;
+}
+
+.header .menu ul li a {
+    color: #01579b;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.header .menu ul li a:hover {
+    text-decoration: underline;
+}
+
+.header .profile a {
+    color: #01579b;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.header .profile a span {
+    margin-right: 8px;
+    font-weight: bold;
+}
+
+.header .profile a img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: #01579b;
+    margin: 5px;
+    transition: 0.4s;
+}
+
+/* Side Navigation Menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1500;
+    background-color: #b3e5fc; /* Azzurro chiaro */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 32px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #01579b;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    background-color: #81d4fa;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    font-size: 40px;
+    text-decoration: none;
+    color: #01579b;
+}
+
+/* Container */
+.container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="email"],
+select,
+input[type="file"] {
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    width: 100%;
+}
+
+/* Button */
+button {
+    padding: 12px;
+    background-color: #0288d1; /* Azzurro medio */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0277bd;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Alert */
+.alert {
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #4CAF50;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header .menu {
+        display: none; /* Nasconde il menu su mobile */
+    }
+
+    .hamburger {
+        display: flex; /* Mostra l'icona hamburger su mobile */
+    }
+
+    .container {
+        width: 90%;
+        margin: 100px auto 20px auto; /* Aggiusta il margine superiore */
+    }
+
+    body {
+        padding-top: 60px; /* Riduci il padding-top su mobile */
+    }
+}
